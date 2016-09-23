@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SkillTemp : MonoBehaviour {
+public class SkillTpl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

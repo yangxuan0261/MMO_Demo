@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CdComp : MonoBehaviour {
+
+
+public class CoolDownComp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {

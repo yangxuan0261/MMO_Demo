@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Actor\Actor.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CoolDownComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CoolDownTimer.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\SkillFunc.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\Template\BuffTpl.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\Template\SkillTpl.cs" />
