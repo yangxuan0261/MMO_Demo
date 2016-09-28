@@ -66,10 +66,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Actor\Actor.cs" />
-    <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CoolDownComp.cs" />
-    <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CoolDownTimer.cs" />
-    <Compile Include="Assets\Scripts\Actor\Skill\SkillTypes.cs" />
+    <Compile Include="Assets\Scripts\Actor\Managers\BaseMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Managers\BuffMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Managers\GameMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Managers\SkillMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CDComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CDTimer.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\BuffComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\SkillComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\SkillBase.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\SkillFunc.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\SkillTypes.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\Template\BuffTpl.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\Template\BulletTpl.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\Template\SkillTpl.cs" />

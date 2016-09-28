@@ -4,7 +4,6 @@ using System.Collections;
 public class BulletTpl : MonoBehaviour {
 
     #region
-    public float mCDTime;
     public ELockedType mLockType;
     public string mAttchPoint;
     public float mCloseEnough;

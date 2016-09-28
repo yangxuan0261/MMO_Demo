@@ -1,18 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-using UnityEngine.Networking;
 
-public class Actor : NetworkBehaviour
+public class BuffComp : MonoBehaviour
 {
-
-    [SerializeField]
-    CoolDownComp mCDComp;
 
     public void Awake()
     {
-        
-    }
 
+    }
 
     // Use this for initialization
     void Start()

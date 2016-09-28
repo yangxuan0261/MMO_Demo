@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class CoolDownTimer : MonoBehaviour
+public class CDTimer
 {
-    public delegate void CDFinishDlg(CoolDownTimer _dlg);
+    public delegate void CDFinishDlg(CDTimer _dlg);
     public event CDFinishDlg dlgHandler;
 
     #region member
@@ -17,17 +17,14 @@ public class CoolDownTimer : MonoBehaviour
     //FCDFinishDlg mCDFinishDlg;//通知代理
     #endregion
 
+    public CDTimer(SkillTpl _tpl)
+    {
+        mCDTime = _tpl.mCDTime;
+    } 
+
     public bool IsOk
     {
         get { return mIsOK; }
-    }
-
-    public SkillTpl skillTpl
-    {
-        get { return mSkillTpl; }
-        set {
-            mSkillTpl = value;
-        }
     }
 
     public void FixedUpdate()
@@ -42,8 +39,6 @@ public class CoolDownTimer : MonoBehaviour
                 dlgHandler(this); //cd完通知char，可以释放技能了
             }
         }
-        else
-            mTimer = mCDTime;
     }
 
     public void Restart()

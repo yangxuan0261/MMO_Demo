@@ -12,6 +12,7 @@ public class SkillTpl : MonoBehaviour {
     public EAnimType mAnimType;
     public int mBehavId; //技能文件id
     public BulletTpl mBulletTpl;
+    public float mCDTime;
     #endregion
 
     #region 属性字符串
