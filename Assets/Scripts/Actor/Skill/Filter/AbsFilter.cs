@@ -4,11 +4,12 @@ using System.Collections.Generic;
 
 public class AbsFilter {
 
+    protected int mLayerMask = 0;
     protected string mKey;
-    protected int mCount; //限制人数
-    protected ESelectType mSelectType;
+    protected int mCount = 0; //限制人数
+    protected ESelectType mSelectType = ESelectType.Enemy;
 
-    protected List<GameObject> mDestChars = new List<GameObject>(); //目标集合
+    protected List<Actor> mDestChars = new List<Actor>(); //目标集合
 
     public string Key
     {
