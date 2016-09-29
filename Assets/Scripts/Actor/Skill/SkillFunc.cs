@@ -1,15 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class SkillFunc : MonoBehaviour {
+public class SkillFunc
+{
+    private SkillTpl mSkillTpl = null;
+    private CDTimer mCDTimer = null;
+    private int mSkillId;
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+    public int SkillId
+    {
+        get { return mSkillId; }
+    }
+
+    public SkillTpl Tpl
+    {
+        get { return mSkillTpl; }
+        set
+        {
+            mSkillTpl = value;
+            mSkillId = mSkillTpl.mId;
+        }
+    }
+
+    public CDTimer Timer
+    {
+        get { return mCDTimer; }
+        set { mCDTimer = value; }
+    }
+
 }

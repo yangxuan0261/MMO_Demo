@@ -36,3 +36,18 @@ public enum ELockedType  //锁定类型
 	Char,		//人
 	Count,
 };
+
+public enum EFilterType //选人类型
+{
+    Locked = 0,	//锁定一人
+	Circle,		//圆形
+	Rect,		//矩形
+	Count,
+};
+
+public enum ESelectType //选人标记
+{
+    Enemy = 0,	//敌
+	Self,		//我
+	Count,
+};

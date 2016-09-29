@@ -5,6 +5,7 @@ public class CDTimer
 {
     public delegate void CDFinishDlg(CDTimer _dlg);
     public event CDFinishDlg dlgHandler;
+    
 
     #region member
     int mSkillId = 0;
@@ -20,7 +21,13 @@ public class CDTimer
     public CDTimer(SkillTpl _tpl)
     {
         mCDTime = _tpl.mCDTime;
+        mSkillId = _tpl.mId;
     } 
+
+    public int SkillId
+    {
+        get { return mSkillId; }
+    }
 
     public bool IsOk
     {

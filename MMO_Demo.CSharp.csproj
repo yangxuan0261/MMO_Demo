@@ -70,11 +70,17 @@
     <Compile Include="Assets\Scripts\Actor\Managers\BuffMgr.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\GameMgr.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\SkillMgr.cs" />
-    <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CDComp.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CDTimer.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\BuffComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Filter\SphereFilter.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Filter\AbsFilter.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Function\AttackPhy.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Function\FuncsMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Function\AbsFunc.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Pk\FightData.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Pk\PkProcess.cs" />
+    <Compile Include="Assets\Scripts\Actor\Skill\Pk\PkMsg.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\SkillComp.cs" />
-    <Compile Include="Assets\Scripts\Actor\Skill\SkillBase.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\SkillFunc.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\SkillTypes.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\Template\BuffTpl.cs" />
@@ -82,5 +88,6 @@
     <Compile Include="Assets\Scripts\Actor\Skill\Template\SkillTpl.cs" />
     <Compile Include="Assets\Scripts\NewBehaviourScript.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\SyntaxTree\UnityVS\2015\UnityVS.CSharp.targets" />
 </Project>
