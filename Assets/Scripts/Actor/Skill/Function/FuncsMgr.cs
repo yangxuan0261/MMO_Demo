@@ -10,7 +10,7 @@ public class FuncsMgr : BaseMgr
         get { return mInstance; }
     }
 
-    #region 字符串定义
+    #region define attribute && filter string 
     [SerializeField]
     string Filter_Circle = "circle";
     [SerializeField]
@@ -36,10 +36,12 @@ public class FuncsMgr : BaseMgr
     {
         #region RegisterFilter
         RegisterFilter(SphereFilter.CreateFilter(Filter_Circle));
+
         #endregion
 
         #region RegisterFunction
         RegisterFunction(AttackPhy.CreateFunc(Func_AttackPhy));
+
         #endregion
     }
 

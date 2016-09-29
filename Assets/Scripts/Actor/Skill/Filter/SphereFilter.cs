@@ -34,13 +34,14 @@ public class SphereFilter : AbsFilter
                 {
                     mDestChars.Add(actor);
                     mCount -= 1;
-                }else if (mCount == -1)
-                {
-                    mDestChars.Add(actor);
                 }
+                else if (mCount == -1)
+                    mDestChars.Add(actor);
+                else
+                    break;
             }
 
-            // debug mode - display range
+            #region debug mode - display range
             if (DefineMgr.DrawFilter)
             {
                 GameObject go = (GameObject) GameObject.Instantiate(DefineMgr.DrawNode, targetLoc, quat);
@@ -53,6 +54,7 @@ public class SphereFilter : AbsFilter
                     Debug.DrawLine(targetLoc, mDestChars[i].transform.position, DefineMgr.DrawColor, DefineMgr.DrawTime);
                 }
             }
+            #endregion
         }
     }
 
