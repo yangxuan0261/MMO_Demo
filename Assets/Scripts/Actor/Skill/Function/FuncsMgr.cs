@@ -4,6 +4,12 @@ using System.Collections.Generic;
 
 public class FuncsMgr : BaseMgr
 {
+    private static FuncsMgr mInstance = null;
+    public static FuncsMgr Ins
+    {
+        get { return mInstance; }
+    }
+
     #region 字符串定义
     [SerializeField]
     string Filter_Circle = "circle";
@@ -14,9 +20,12 @@ public class FuncsMgr : BaseMgr
     private Dictionary<string, AbsFilter> mFilterList = new Dictionary<string, AbsFilter>();
     private Dictionary<string, AbsFunc> mFuncList = new Dictionary<string, AbsFunc>();
 
+
+
     public override void Awake()
     {
         base.Awake();
+        mInstance = this;
         InitFiltersAndFuncs();
     }
 

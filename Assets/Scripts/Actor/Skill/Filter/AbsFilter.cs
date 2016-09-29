@@ -6,7 +6,8 @@ public class AbsFilter {
 
     protected string mKey;
     protected int mCount; //限制人数
-    ESelectType mSelectType;
+    protected ESelectType mSelectType;
+
     protected List<GameObject> mDestChars = new List<GameObject>(); //目标集合
 
     public string Key
