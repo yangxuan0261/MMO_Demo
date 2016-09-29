@@ -68,7 +68,9 @@
     <Compile Include="Assets\Scripts\Actor\Actor.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\BaseMgr.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\BuffMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Managers\LogMgr.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\GameMgr.cs" />
+    <Compile Include="Assets\Scripts\Actor\Managers\DefineMgr.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\SkillMgr.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\CoolDown\CDTimer.cs" />
     <Compile Include="Assets\Scripts\Actor\Skill\BuffComp.cs" />

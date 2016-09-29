@@ -14,7 +14,7 @@ public class AttackPhy : AbsFunc
         return null;
     }
 
-    public override void Parser(List<string> _params)
+    public override void Parser(ref List<string> _params)
     {
 
     }

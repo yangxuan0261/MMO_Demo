@@ -4,10 +4,12 @@ using System.Collections.Generic;
 
 public class FuncsMgr : BaseMgr
 {
+    #region 字符串定义
     [SerializeField]
     string Filter_Circle = "circle";
     [SerializeField]
     string Func_AttackPhy = "phyattack";
+    #endregion
 
     private Dictionary<string, AbsFilter> mFilterList = new Dictionary<string, AbsFilter>();
     private Dictionary<string, AbsFunc> mFuncList = new Dictionary<string, AbsFunc>();
@@ -57,13 +59,48 @@ public class FuncsMgr : BaseMgr
     public AbsFilter CreateFilter(string _str)
     {
         string str = _str.ToLower();
+        string[] strArr = str.Split(DefineMgr.Split_Line.ToCharArray());
+        if (strArr.Length > 0)
+        {
+            List<string> paramArr = new List<string>(strArr);
+            string clsName = paramArr[0];
+            AbsFilter filter = null;
+            mFilterList.TryGetValue(clsName, out filter);
+            if (filter == null)
+            {
+                LogMgr.Error("--- Not found Filter clsName:{0}", clsName);
+                return null;
+            }
 
+            paramArr.RemoveAt(0);
+            AbsFilter ret = filter.Clone();
+            ret.Parser(ref paramArr);
+            return ret;
+        }
         return null;
     }
 
     public AbsFunc CreateFunction(string _str)
     {
+        string str = _str.ToLower();
+        string[] strArr = str.Split(DefineMgr.Split_Line.ToCharArray());
+        if (strArr.Length > 0)
+        {
+            List<string> paramArr = new List<string>(strArr);
+            string clsName = paramArr[0];
+            AbsFunc func = null;
+            mFuncList.TryGetValue(clsName, out func);
+            if (func == null)
+            {
+                LogMgr.Error("--- Not found Func clsName:{0}", clsName);
+                return null;
+            }
 
+            paramArr.RemoveAt(0);
+            AbsFunc ret = func.Clone();
+            ret.Parser(ref paramArr);
+            return ret;
+        }
         return null;
     }
 }

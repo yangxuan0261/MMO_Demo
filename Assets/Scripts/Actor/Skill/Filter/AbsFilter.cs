@@ -17,7 +17,7 @@ public class AbsFilter {
 
     public virtual void Filter(PkMsg _msg) { }
     public virtual AbsFilter Clone() { return null; }
-    public virtual void Parser(List<string> _params) {} //解析数据
+    public virtual void Parser(ref List<string> _params) {} //解析数据
     public virtual void DebugDraw() { }
 
 }

@@ -13,7 +13,7 @@ public class AbsFunc
         set { mKey = value; }
     }
 
-    public virtual void Parser(List<string> _params) {} //解释数据
+    public virtual void Parser(ref List<string> _params) {} //解释数据
     public virtual AbsFunc Clone() { return null; }
 
     public virtual void RunBeforeSkill(PkMsg _msg) { }
