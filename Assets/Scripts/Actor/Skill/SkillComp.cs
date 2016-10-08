@@ -2,9 +2,12 @@
 using System.Collections;
 using System.Collections.Generic;
 
+[RequireComponent(typeof(StatusComp))]
+
 public class SkillComp : MonoBehaviour
 {
     private Dictionary<int, SkillFunc> mSkillList = new Dictionary<int, SkillFunc>();
+    private SkillFunc mUsing = null;
 
     public void Awake()
     {
@@ -43,14 +46,22 @@ public class SkillComp : MonoBehaviour
 
     }
 
-    public void UseSkill(int _skillId, GameObject _go, Vector3 _loc)
+    /// <summary>
+    /// 使用技能
+    /// </summary>
+    /// <param name="_skillId"></param>
+    /// <param name="_loc"></param>
+    /// <param name="_target"></param>
+    public void UseSkill(int _skillId, Vector3 _loc, GameObject _target = null)
     {
         SkillFunc skill = CanUse(_skillId);
         if (skill != null)
         {
-            if (_go != null)
+            mUsing = skill;
+
+            if (_target != null)
             {
-                Actor ator = _go.GetComponent<Actor>();
+                Actor ator = _target.GetComponent<Actor>();
                 if (ator)
                 {
 
@@ -62,6 +73,12 @@ public class SkillComp : MonoBehaviour
             }
 
         }
+    }
+
+    public void CreateBullet(GameObject _target)
+    {
+        StatusComp statusCmp = GetComponent<StatusComp>();
+
     }
 
     /// <summary>

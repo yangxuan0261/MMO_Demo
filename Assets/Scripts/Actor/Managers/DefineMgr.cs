@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 public class DefineMgr : BaseMgr
 {
-    #region 分割符
+    #region split string
     public static string Split_Line = "_";
     public static string Split_Pound = "#";
     public static string Split_Sem = ";";

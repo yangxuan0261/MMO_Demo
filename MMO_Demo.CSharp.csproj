@@ -65,6 +65,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Actor\AtkTriggerComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\MecanimComp.cs" />
+    <Compile Include="Assets\Scripts\Actor\StatusComp.cs" />
     <Compile Include="Assets\Scripts\Utils\DrawComp.cs" />
     <Compile Include="Assets\Scripts\Actor\Actor.cs" />
     <Compile Include="Assets\Scripts\Actor\Managers\BaseMgr.cs" />
